@@ -9,6 +9,7 @@ namespace Parser
             var menu = new Menu();
             menu.StartMenu();
             Console.ReadKey();
+
         }
     }
       

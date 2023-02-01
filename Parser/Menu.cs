@@ -35,6 +35,7 @@ namespace Parser
 
         public void TisbiMenu()
         {
+            var parserTisbiRu = new ParserTisbiRu();
             string choose;
             Console.WriteLine("1. Информация о подаче документов.");
             Console.WriteLine("2. Перечень документов для поступления.");
@@ -47,7 +48,7 @@ namespace Parser
             {
                 case "1":
                     Console.Clear();
-                    Console.WriteLine("меню при нажатии 1");
+                    parserTisbiRu.Parse();
                     break;
                 case "2":
                     Console.Clear();
