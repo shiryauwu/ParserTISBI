@@ -48,19 +48,19 @@ namespace Parser
             {
                 case "1":
                     Console.Clear();
-                    parserTisbiRu.Parse();
+                    parserTisbiRu.ParseFirstButton();
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("меню при нажатии 2");
+                    parserTisbiRu.ParseSecondButton();
                     break;
                 case "3":
                     Console.Clear();
-                    Console.WriteLine("меню при нажатии 3");
+                    parserTisbiRu.ParseThirdButton();
                     break;
                 case "4":
                     Console.Clear();
-                    Console.WriteLine("меню при нажатии 4");
+                    parserTisbiRu.ParseFourthButton();
                     break;
                 case "5":
                     Console.Clear();
