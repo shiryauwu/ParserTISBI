@@ -12,11 +12,17 @@ namespace Parser
 {
     internal class ParserTisbiRu
     {
+        IWebDriver driver = new PhantomJSDriver();
+        string Text { get; set; }
+
         
-        public void ParseFirstButton()
+
+        
+        
+        public void ParseFirstButton()                    //Парсит инфу для абитуриентов
         {
             
-            IWebDriver driver = new PhantomJSDriver();
+            Console.Clear();    
             driver.Navigate().GoToUrl(@"https://www.tisbi.ru/postupit/");
             IWebElement tag = driver.FindElement(By.ClassName(@"covid-message"));
             string text = tag.Text;
@@ -24,10 +30,9 @@ namespace Parser
             Console.WriteLine(text);
         }
 
-        public void ParseSecondButton()
+        public void ParseSecondButton()                   //Парсит инфу про документы
         {
-
-            IWebDriver driver = new PhantomJSDriver();
+            Console.Clear();
             driver.Navigate().GoToUrl(@"https://www.tisbi.ru/postupit/");
             IWebElement tag = driver.FindElement(By.ClassName(@"covid-scheme"));
             string text = tag.Text;
@@ -35,10 +40,9 @@ namespace Parser
             Console.WriteLine(text);
         }
 
-        public void ParseThirdButton()
+        public void ParseThirdButton()                    //Парсит инфу про датя для бюджетников
         {
-
-            IWebDriver driver = new PhantomJSDriver();
+            Console.Clear();
             driver.Navigate().GoToUrl(@"https://www.tisbi.ru/postupit/");
             Console.Clear();
             for (int i = 3; i <= 11; i++)
@@ -51,10 +55,9 @@ namespace Parser
             
         }
 
-        public void ParseFourthButton()
+        public void ParseFourthButton()                     //Парсит даты для платников
         {
-
-            IWebDriver driver = new PhantomJSDriver();
+            Console.Clear();
             driver.Navigate().GoToUrl(@"https://www.tisbi.ru/postupit/");
             Console.Clear();
             for (int i = 12; i <= 16; i++)

@@ -8,7 +8,7 @@ namespace Parser
 {
     internal class Menu
     {
-        public void StartMenu()
+        public void StartMenu()  //Стартовое меню. Запускается при запуске проги
         {
             string choose;
             Console.WriteLine("Выбор сайта:");
@@ -33,7 +33,7 @@ namespace Parser
             }
         }
 
-        public void TisbiMenu()
+        public void TisbiMenu()     //Меню для парсинга сайта ТИСБИ
         {
             var parserTisbiRu = new ParserTisbiRu();
             string choose;
