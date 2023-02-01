@@ -36,6 +36,7 @@ namespace Parser
         public void TisbiMenu()     //Меню для парсинга сайта ТИСБИ
         {
             var parserTisbiRu = new ParserTisbiRu();
+            Console.Clear();
             string choose;
             Console.WriteLine("1. Информация о подаче документов.");
             Console.WriteLine("2. Перечень документов для поступления.");
