@@ -42,7 +42,13 @@ namespace Parser
             Console.WriteLine("2. Перечень документов для поступления.");
             Console.WriteLine("3. Основные даты для поступления на бюджет.");
             Console.WriteLine("4. Основные даты для поступления на коммерцию.");
-            Console.WriteLine("5. Назад в главное меню.");
+            Console.WriteLine("5. Схема поступления");
+            Console.WriteLine("6. Вступительные испытания");
+            Console.WriteLine("7. Как проходит зачисление");
+            Console.WriteLine("8. Расписание онлайн-консультаций с приемной комиссией");
+            Console.WriteLine("9. Расписание онлайн-консультаций с деканами факультетов");
+            Console.WriteLine("0.Расписание онлайн Дней открытых дверей");
+            Console.WriteLine("10. Назад в главное меню.");
 
             choose = Console.ReadLine();
             switch (choose)
@@ -65,8 +71,34 @@ namespace Parser
                     break;
                 case "5":
                     Console.Clear();
+                    parserTisbiRu.ParseFiveButton();
+                    break;
+                case "6":
+                    Console.Clear();
+                    parserTisbiRu.ParserSixthButton();
+                    break;
+                case "7":
+                    Console.Clear();
+                    parserTisbiRu.ParserSeventhButton();
+                    break;
+                case "8":
+                    Console.Clear();
+                    parserTisbiRu.ParserEigthButton();
+                    break;
+                case "9":
+                    Console.Clear();
+                    parserTisbiRu.ParserNinethButton();
+                    break;
+
+                case "0":
+                    Console.Clear();
+                    parserTisbiRu.ParserTenthButton();
+                    break;
+                case "10":
+                    Console.Clear();
                     StartMenu();
                     break;
+
 
                 default:
                     Console.Clear();
