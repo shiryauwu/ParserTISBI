@@ -10,7 +10,8 @@ namespace Parser
 {
     internal class IsuVuzParser
     {
-        IWebDriver driver = new ChromeDriver(); 
+
+        IWebDriver driver = new ChromeDriver();
 
         public void StartParse()
         {
@@ -21,13 +22,14 @@ namespace Parser
             string login = Console.ReadLine();
             string password = Console.ReadLine();
             Thread.Sleep(2000);
-            IWebElement _login = driver.FindElement(By.XPath(@"//input[contains(@name,'Login')]"));
+            driver.FindElement(By.XPath(@"//input[contains(@name,'Login')]")).SendKeys(login);
             Thread.Sleep(2000);
-            IWebElement _password = (IWebElement)driver.FindElements(By.XPath(@"//input[contains(@name,'Password')]"));
+
+
+            driver.FindElement(By.XPath(@"//input[contains(@name,'Password')]")).SendKeys(password);
+            
             Thread.Sleep(2000);
-            _login.SendKeys(login);
-            Thread.Sleep(2000);
-            _password.SendKeys(password);
+            driver.FindElement(By.XPath(@"//button[@type='button'][contains(.,'Войти')]")).Click();
         }
 
     }
