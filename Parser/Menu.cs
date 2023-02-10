@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Parser
 {
-    internal class Menu
+    internal class Menu: ParserTisbiRu
     {
         public void StartMenu()  //Стартовое меню. Запускается при запуске проги
         {
@@ -23,7 +23,7 @@ namespace Parser
                     break;
                 case "2":
                     Console.Clear();
-                    Console.WriteLine("меню при нажатии 2");
+                    IsuVuzMenu();
                     break;
 
                 default:
@@ -32,10 +32,18 @@ namespace Parser
                     break;
             }
         }
-
+        public void IsuVuzMenu()
+        {
+            var parserIsuVuz = new IsuVuzParser();
+            Console.Clear();
+            string choose;
+            
+            parserIsuVuz.StartParse();
+            Console.WriteLine("1. Распмсание");
+        }
         public void TisbiMenu()     //Меню для парсинга сайта ТИСБИ
         {
-            var parserTisbiRu = new ParserTisbiRu();
+            
             Console.Clear();
             string choose;
             Console.WriteLine("1. Информация о подаче документов.");
@@ -55,44 +63,44 @@ namespace Parser
             {
                 case "1":
                     Console.Clear();
-                    parserTisbiRu.ParseFirstButton();
+                    ParseFirstButton();
                     break;
                 case "2":
                     Console.Clear();
-                    parserTisbiRu.ParseSecondButton();
+                    ParseSecondButton();
                     break;
                 case "3":
                     Console.Clear();
-                    parserTisbiRu.ParseThirdButton();
+                    ParseThirdButton();
                     break;
                 case "4":
                     Console.Clear();
-                    parserTisbiRu.ParseFourthButton();
+                    ParseFourthButton();
                     break;
                 case "5":
                     Console.Clear();
-                    parserTisbiRu.ParseFiveButton();
+                    ParseFiveButton();
                     break;
                 case "6":
                     Console.Clear();
-                    parserTisbiRu.ParserSixthButton();
+                    ParserSixthButton();
                     break;
                 case "7":
                     Console.Clear();
-                    parserTisbiRu.ParserSeventhButton();
+                    ParserSeventhButton();
                     break;
                 case "8":
                     Console.Clear();
-                    parserTisbiRu.ParserEigthButton();
+                    ParserEigthButton();
                     break;
                 case "9":
                     Console.Clear();
-                    parserTisbiRu.ParserNinethButton();
+                    ParserNinethButton();
                     break;
 
                 case "0":
                     Console.Clear();
-                    parserTisbiRu.ParserTenthButton();
+                    ParserTenthButton();
                     break;
                 case "10":
                     Console.Clear();
