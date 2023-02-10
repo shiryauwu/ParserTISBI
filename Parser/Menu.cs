@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Parser
 {
-    internal class Menu: ParserTisbiRu
+    internal class Menu: IsuVuzParser
     {
         public void StartMenu()  //Стартовое меню. Запускается при запуске проги
         {
+            Console.Clear();
             string choose;
             Console.WriteLine("Выбор сайта:");
             Console.WriteLine("1. tisbi.ru");
@@ -39,7 +40,7 @@ namespace Parser
             string choose;
             
             parserIsuVuz.StartParse();
-            Console.WriteLine("1. Распмсание");
+            
         }
         public void TisbiMenu()     //Меню для парсинга сайта ТИСБИ
         {

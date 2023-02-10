@@ -10,10 +10,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Parser
 {
-    internal class ParserTisbiRu
+    public class ParserTisbiRu
     {
-        IWebDriver driver = new ChromeDriver();
-        string Text { get; set; }
+        public IWebDriver driver = new ChromeDriver();
+        
 
         
 
